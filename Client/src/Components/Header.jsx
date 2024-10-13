@@ -26,6 +26,5 @@ export default function Header() {
             <a href="" className='w-full text-lg text-center hover:text-gray-800'>Contact Us</a>
         </div>}
         </nav>
-    </div>
-  )
+    </div>  )
 }

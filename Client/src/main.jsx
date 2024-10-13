@@ -6,6 +6,8 @@ import Home from './Pages/Home/Home';
 import { Outlet } from "react-router-dom";
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import CompetitionsPage from './pages/CompetitionsPage';
+import CompetitionPage from './pages/CompetitionPage';
 
 
 function Layout() {
@@ -27,14 +29,14 @@ const router = createBrowserRouter([{
     path: "/",
     element: <Home />
   },
-  // {
-  //   path: "/competitions/:name",
-  //   element: <CompetitionPage />
-  // },
-  // {
-  //   path: "/competitions/:name",
-  //   element: <CompetitionPage />
-  // },
+  {
+    path: "/competitions",
+    element: <CompetitionsPage />
+  },
+  {
+    path: "/competitions/:name",
+    element: <CompetitionPage />
+  },
 ]}]);
 
 createRoot(document.getElementById('root')).render(
