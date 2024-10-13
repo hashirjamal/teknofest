@@ -22,6 +22,7 @@ export default function CompetitionTable({data}) {
             <TableCell sx={{color: "white"}} align="right">Team Lead Number</TableCell>
             <TableCell sx={{color: "white"}} align="right">Education Institution</TableCell>
             <TableCell sx={{color: "white"}} align="right">Competition</TableCell>
+            <TableCell sx={{color: "white"}} align="right">Payment</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -38,6 +39,7 @@ export default function CompetitionTable({data}) {
               <TableCell sx={{color: "white"}} align="right">{row.teamLeadNumber}</TableCell>
               <TableCell sx={{color: "white"}} align="right">{row.educationalInstitute}</TableCell>
               <TableCell sx={{color: "white"}} align="right">{row.competition}</TableCell>
+              <TableCell sx={{color: "white"}} align="right">{row.payment}</TableCell>
             </TableRow>
           ))}
         </TableBody>
