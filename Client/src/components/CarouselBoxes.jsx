@@ -39,7 +39,7 @@ export default Example;
 function Item(props)
 {
     return (
-        <Paper sx={{width: "40%", minHeight: "80%", padding: "2em"}}>
+        <Paper sx={{width: "40%", minHeight: "80%", padding: "2em", backgroundColor: "grey"}}>
             <h2>{props.item.name}</h2>
             <p>{props.item.description}</p>
         </Paper>

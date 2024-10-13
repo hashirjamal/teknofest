@@ -6,6 +6,8 @@ import Home from './Pages/Home/Home';
 import { Outlet } from "react-router-dom";
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import CompetitionsPage from './pages/CompetitionsPage';
+import CompetitionPage from './pages/CompetitionPage';
 
 
 function Layout() {
@@ -29,7 +31,7 @@ const router = createBrowserRouter([{
   },
   {
     path: "/competitions",
-    element: <CompetitionPage />
+    element: <CompetitionsPage />
   },
   {
     path: "/competitions/:name",
