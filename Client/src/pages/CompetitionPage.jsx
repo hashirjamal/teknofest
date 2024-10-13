@@ -33,7 +33,7 @@ function CompetitionPage() {
 
     return (
         <div>
-            <section className="bg-gray-800 text-white">
+            <section className="bg-gray-800 h-screen text-white">
                 <div className="flex justify-around">
                     <img
                         src={competition?.imageURL}
@@ -46,23 +46,12 @@ function CompetitionPage() {
                         <h1 className="text-6xl font-bold">
                             {competition.title}
                         </h1>
+                        <h1 className="text-xl font-bold">
+                           Entry Fees: Rs. {competition.price} / member
+                        </h1>
                         <p>{competition?.timings}</p>
                         <p>Expo Center Karachi, Hall 3 & 4</p>
                         <p>{competition?.description}</p>
-                        <div className="flex flex-wrap gap-4 sm:justify-start justify-center">
-                            <button className="p-3 rounded-lg bg-green-700">
-                                BookKaru
-                            </button>
-                            <button className="p-3 rounded-lg bg-green-700">
-                                Grab Your Pass
-                            </button>
-                            <button className="p-3 rounded-lg bg-green-700">
-                                See Competitions
-                            </button>
-                            <button className="p-3 rounded-lg bg-green-700">
-                                Project Registeration
-                            </button>
-                        </div>
                     </div>
                 </div>
             </section>
