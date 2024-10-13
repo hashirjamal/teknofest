@@ -13,11 +13,9 @@ const competitionFormSchema = mongoose.Schema({
   },
   teamLeadNumber: {
     type: "string",
-    require: [true, " team lead number is req"],
   },
   teamLeadGender: {
     type: "string",
-    require: [true, " team lead gender is req"],
   },
   educationalInstitute: {
     type: "string",
@@ -25,36 +23,30 @@ const competitionFormSchema = mongoose.Schema({
   },
   secondName: {
     type: "string",
-    require: [true, " team lead name is req"],
   },
   secondEmail: {
     type: "string",
   },
   secondGender: {
     type: "string",
-    require: [true, " team lead gender is req"],
   },
   thirdName: {
     type: "string",
-    require: [true, " team lead name is req"],
   },
   thirdEmail: {
     type: "string",
   },
   thirdGender: {
     type: "string",
-    require: [true, " team lead gender is req"],
   },
   firstName: {
     type: "string",
-    require: [true, " team lead name is req"],
   },
   firstEmail: {
     type: "string",
   },
   firstGender: {
     type: "string",
-    require: [true, " team lead gender is req"],
   },
 });
 const competitionFormModel = mongoose.model(
