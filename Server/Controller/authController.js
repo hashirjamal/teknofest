@@ -117,7 +117,7 @@ const sendEmail = async (email, message, username) => {
     </html>
   `;
   const mailOptions = {
-    from: "m.bilal0111@gmail.com",
+    from: "bilalmuhammad0324@gmail.com",
     to: email,
     subject: "Password change request received",
     text: message,
