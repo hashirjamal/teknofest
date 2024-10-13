@@ -1,5 +1,6 @@
 const express = require("express");
 const CompetitionRouter = require("./Router/CompetitionsRoute");
+const competitionFormRoute = require("./Router/competitionFormRoute");
 const authRoute = require("./Router/authRoute");
 const app = express();
 const cors = require("cors");
@@ -12,6 +13,7 @@ app.use(cors({
 
 app.use(express.json());
 app.use("/api/auth", authRoute);
+app.use("/api/competitionForm", competitionFormRoute);
 app.use("/api/competitions", CompetitionRouter);
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
