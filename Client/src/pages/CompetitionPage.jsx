@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Example from "../components/CarouselBoxes";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Form from "../Components/Form";
 
 function CompetitionPage() {
     const { id } = useParams();
@@ -54,6 +55,7 @@ function CompetitionPage() {
                         <p>{competition?.description}</p>
                     </div>
                 </div>
+                <Form noOfMembers={4}/>
             </section>
         </div>
     );
