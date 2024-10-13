@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import gif from "../assets/Images/website.gif"
 import Example from "../components/CarouselBoxes";
+import axios from "axios";
+import CardBox from "../components/CardBox";
 
 function CompetitionsPage() {
   const [competitions, setCompetitions] = useState([]);
@@ -9,15 +11,17 @@ function CompetitionsPage() {
   useEffect(() => {
     const handleCompetitions = async() => {
       try{
-        let result = await axios.get("http://localhost:8000/api/competitions");
-        result = result.data;
+        let result = await axios.get("http://localhost:3000/api/competitions");
+        result = result.data.data.competitionData;
         setCompetitions(result);
       }
       catch(err){
         console.error(err);
       }
     }
-  })
+
+    handleCompetitions();
+  }, []);
 
   return (
     <div>
@@ -33,8 +37,11 @@ function CompetitionsPage() {
             <img src={gif} className='sm:w-1/2'/>
             </div>
 
-            <div>
-              <Example competitions={competitions} />
+            <div className="flex gap-4 flex-wrap items-center justify-center">
+              {/* <Example competitions={competitions} /> */}
+              {competitions.map((competition, i) => {
+                 return <CardBox id={competition._id} title={competition.title} description={competition.description} imageURL={competition.imageURL} timings={competition.timings} price={competitions.price} />
+              })}
             </div>
         </section>
 

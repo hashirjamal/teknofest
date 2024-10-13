@@ -1,34 +1,17 @@
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
+import { Paper } from '@mui/material'
 
 function Example({competitions})
 {
-    console.log(competitions);
-    // var items = [
-    //   [  {
-    //         name: "Graphics and Design",
-    //         description: "Dive into the world of graphics and animation."
-    //     },
-    //     {
-    //         name: "Random Name #2",
-    //         description: "Hello World!"
-    //     }],
-    //   [  {
-    //         name: "Random Name #1",
-    //         description: "Probably the most random thing you have ever seen!"
-    //     },
-    //     {
-    //         name: "Random Namedasfdsfsdfsd#2",
-    //         description: "Hello World!"
-    //     }]
-    // ]
+    competitions && console.log(competitions);
+
 
     return (
         <Carousel>
             {
-                competitions.map( (item, i) => <div className="flex flex-row items-center justify-center align-middle w-screen gap-2 basis-1/2">
-                    <Item key={i} item={item[0]} />
-                    <Item key={i} item={item[1]} />
+                competitions && competitions.map( (item, i) => <div className="flex flex-row items-center justify-center align-middle w-screen gap-2 basis-1/2">
+                    <Item key={i} id={item._id} title={item.title} category={item.category} description={item.description} price={item.price} timings={item.timings} image={item.imageURL} />
+                    {/* <Item key={i} item={item[1]} /> */}
                     </div> )
             }
         </Carousel>
@@ -37,13 +20,20 @@ function Example({competitions})
 
 export default Example;
 
-function Item(props)
+function Item({title, category, description, price, timings, image})
 {
     return (
-        <Paper sx={{width: "40%", minHeight: "80%", padding: "2em", backgroundColor: "grey"}}>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
-        </Paper>
+        <Paper sx={{width: "80%", minHeight: "80%", padding: "2em", backgroundColor: "grey"}}>
+            <img src={image} alt="" className='w-1/2 h-full absolute top-0 left-0' />
+            <div className='relative top-[50%] left-[50%]'>
+            <h2>{category}</h2>
+            <h2>{title}</h2>
+            <h2>{price}</h2>
+            <h2>{timings}</h2>
+            <p>{description}</p>
+        
+            </div>
+            </Paper>
     )
 }
 
