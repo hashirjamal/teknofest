@@ -27,14 +27,14 @@ const router = createBrowserRouter([{
     path: "/",
     element: <Home />
   },
-  // {
-  //   path: "/competitions/:name",
-  //   element: <CompetitionPage />
-  // },
-  // {
-  //   path: "/competitions/:name",
-  //   element: <CompetitionPage />
-  // },
+  {
+    path: "/competitions",
+    element: <CompetitionPage />
+  },
+  {
+    path: "/competitions/:name",
+    element: <CompetitionPage />
+  },
 ]}]);
 
 createRoot(document.getElementById('root')).render(
