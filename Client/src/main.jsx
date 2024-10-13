@@ -28,7 +28,10 @@ const router = createBrowserRouter([{
     path: "/",
     element: <Home />
   },
-  
+  {
+    path: "formChecker",
+    element: <Form noOfMembers={4}/>
+  },
   // {
   //   path: "/competitions/:name",
   //   element: <CompetitionPage />
