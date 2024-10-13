@@ -2,6 +2,13 @@ const express = require("express");
 const CompetitionRouter = require("./Router/CompetitionsRoute");
 const authRoute = require("./Router/authRoute");
 const app = express();
+const cors = require("cors");
+
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
+
 
 app.use(express.json());
 app.use("/api/auth", authRoute);

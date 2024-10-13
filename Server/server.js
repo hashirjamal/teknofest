@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 
 const PORT = process.env.PORT;
+
+
 app.listen(PORT, () => {
   console.log("Server has been connected on http://localhost:3000");
 });
