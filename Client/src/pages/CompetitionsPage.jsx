@@ -36,9 +36,6 @@ function CompetitionsPage() {
 </div>
             <img src={gif} className='sm:w-1/2'/>
             </div>
-              <div>
-              <Example competitions={competitions?.category} />
-              </div>
             <div className="flex gap-4 flex-wrap items-center justify-center">
               {competitions.map((competition, i) => {
                  return <CardBox id={competition._id} title={competition.title} description={competition.description} imageURL={competition.imageURL} timings={competition.timings} price={competitions.price} />

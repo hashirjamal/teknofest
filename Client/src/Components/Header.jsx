@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import logo from "../assets/Images/AMP.webp"
+import { Link } from 'react-router-dom';
 export default function Header() {
 
     const [toggle,setToggle] = useState(false);
@@ -14,9 +15,9 @@ export default function Header() {
 
         
         <nav className='hidden  md:flex md:gap-4 text-xl py-6'>
-            <a href="">Home</a>
-            <a href="/competitions">Competitions</a>
-            <a href="">Contact Us</a>
+            <Link to="/">Home</Link>
+            <Link to="/competitions">Competitions</Link>
+            <Link>Contact Us</Link>
           
         </nav>
         <nav className='md:hidden cursor-pointer mb-[1.5rem] flex flex-col justify-end  items-end' onClick={()=>{setToggle((p)=>!p)}}><DehazeIcon sx={{}} />

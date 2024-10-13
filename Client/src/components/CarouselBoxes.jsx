@@ -30,8 +30,7 @@ function Item({title, category, description, price, timings, image})
             <h2>{title}</h2>
             <h2>{price}</h2>
             <h2>{timings}</h2>
-            <p>{description}</p>
-        
+            <p>{description}</p>        
             </div>
             </Paper>
     )

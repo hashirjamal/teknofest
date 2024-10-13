@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import CompetitionsPage from './pages/CompetitionsPage';
 import CompetitionPage from './pages/CompetitionPage';
+import AdminPage from './pages/AdminPage';
 
 
 function Layout() {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([{
     path: "/competitions/:id",
     element: <CompetitionPage />
   },
+  {
+    path: "/admin",
+    element: <AdminPage />
+  }
 ]}]);
 
 createRoot(document.getElementById('root')).render(
