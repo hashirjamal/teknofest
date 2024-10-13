@@ -8,6 +8,7 @@ exports.competitionForm = async (req, res, next) => {
       enteredData: formData,
     });
   } catch (err) {
+     console.log(err)
     return next(new CustomErrors(err.message, 403));
   }
 };

@@ -34,7 +34,7 @@ function CompetitionPage() {
 
     return (
         <div>
-            <section className="bg-gray-800 h-screen text-white">
+            <section className="mt-10 h-screen ">
                 <div className="flex justify-around">
                     <img
                         src={competition?.imageURL}

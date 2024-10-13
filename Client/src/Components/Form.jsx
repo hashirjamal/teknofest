@@ -54,25 +54,39 @@ export default function Form({noOfMembers}) {
   return (
     <div className='p-10'>
      
-        <TextField id="outlined-basic" label="Name" variant="outlined"  sx={inpStyle} />
+        <TextField id="outlined-basic" label="Team Name" variant="outlined" value={leadData.teamName} 
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p, teamName:e.target.value}
+            })
+        }}
+        sx={inpStyle} />
 
      <h3 className="text-2xl font-bold py-6 text-blue-950">Team Lead's Information</h3>
 
 <div className='flex flex-wrap gap-3 my-4 '>
-        <TextField id="outlined-basic" label="Name" variant="outlined" value={leadData.teamLeadName}  sx={inpStyle} />
-        <TextField id="outlined-basic" label="Phone Number" variant="outlined" value={leadData.teamLeadNumber} sx={inpStyle}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" onChange={(e)=>setLeadData((p)=>{
+            return {...p, teamLeadName:e.target.value}
+        })} value={leadData.teamLeadName}  sx={inpStyle} />
+        <TextField id="outlined-basic" label="Phone Number" variant="outlined" value={leadData.teamLeadNumber} sx={inpStyle}  onChange={(e)=>setLeadData((p)=>{
+            return {...p, teamLeadNumber:e.target.value}
+        })} />
 
 </div>
 <div className='flex flex-wrap gap-3 my-4 '>
-        <TextField id="outlined-basic" label="Email" variant="outlined" sx={inpStyle} value={leadData.teamLeadEmail} />
-        <TextField id="outlined-basic" label="Address" variant="outlined"   sx={inpStyle}/>
+        <TextField id="outlined-basic" label="Email" variant="outlined"  onChange={(e)=>setLeadData((p)=>{
+            return {...p, teamLeadEmail:e.target.value}
+        })} sx={inpStyle} value={leadData.teamLeadEmail} />
+        <TextField id="outlined-basic" label="Address" variant="outlined" 
+        
+        sx={inpStyle}/>
 
 </div>
 <div className='flex flex-wrap gap-3 my-4 '>
 <Select sx={inpStyle}
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={"Male"}
+        value={leadData.teamLeadGender}
         label="Gender"
           onChange={(event)=>{setLeadData((p)=>{
             return {
@@ -84,23 +98,10 @@ export default function Form({noOfMembers}) {
         <MenuItem value={"Female"}>Female</MenuItem>
         <MenuItem value={"Other"}>Other</MenuItem>
         </Select>
-<Select sx={inpStyle}
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
-        value={"Graduation"}
-        label="Education Level"
-        //   onChange={handleChange}
-        onChange={(event)=>{setLeadData((p)=>{
-            return {
-                ...p,   educationalInstitute:event.target.value
-            }
-          })}}
-        >
-        <MenuItem value={"Graduation"}>Graduation</MenuItem>
-        <MenuItem value={"Masters"}>Master</MenuItem>
-        <MenuItem value={"Completed"}>Completed</MenuItem>
-        <MenuItem value={"Intermediate"}>Intermediate</MenuItem>
-        </Select>
+
+        <TextField id="outlined-basic" label="Educational Institute" variant="outlined" 
+        value={leadData.educationalInstitute} onChange={(e)=>setLeadData((p)=>({...p, educationalInstitute:e.target.value}))}
+        sx={inpStyle}/>
 
 
 </div>
@@ -109,14 +110,26 @@ export default function Form({noOfMembers}) {
 <h3 className="text-2xl font-bold py-6 text-blue-950">2nd Member's Info</h3>
 
 <div className='flex flex-wrap gap-3 my-4 '>
-        <TextField id="outlined-basic" label="Name" variant="outlined" value={leadData.firstName}  sx={inpStyle} />
-        <TextField id="outlined-basic" label="Email" variant="outlined" value={leadData.firstEmail} sx={inpStyle}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" value={leadData.firstName} onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,firstName:e.target.value}
+            })
+        }} sx={inpStyle} />
+        <TextField id="outlined-basic" label="Email" variant="outlined" 
+        
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,firstEmail:e.target.value}
+            })
+        }}
+        
+        value={leadData.firstEmail} sx={inpStyle}/>
 
 </div>
 <Select sx={inpStyle}
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={"Male"}
+        value={leadData.firstGender}
         label="Gender"
           onChange={(event)=>setLeadData((p)=>{
             return {
@@ -134,14 +147,28 @@ export default function Form({noOfMembers}) {
 <h3 className="text-2xl font-bold py-6 text-blue-950">3rd Member's Info</h3>
 
 <div className='flex flex-wrap gap-3 my-4 '>
-        <TextField id="outlined-basic" label="Name" variant="outlined" value={leadData.secondName}  sx={inpStyle} />
-        <TextField id="outlined-basic" label="Email" variant="outlined" value={leadData.secondEmail} sx={inpStyle}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" 
+        
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,secondName:e.target.value}
+            })
+        }}
+
+        value={leadData.secondName}  sx={inpStyle} />
+        <TextField id="outlined-basic" label="Email" variant="outlined" 
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,secondEmail:e.target.value}
+            })
+        }}
+        value={leadData.secondEmail} sx={inpStyle}/>
 
 </div>
 <Select sx={inpStyle}
         labelId="demo-simple-select-label"
         id="demo-simple-select"
-        value={"Male"}
+        value={leadData.secondGender}
         label="Gender"
           onChange={(event)=>setLeadData((p)=>{
             return {
@@ -159,8 +186,20 @@ export default function Form({noOfMembers}) {
 <h3 className="text-2xl font-bold py-6 text-blue-950">4th Member's Info</h3>
 
 <div className='flex flex-wrap gap-3 my-4 '>
-        <TextField id="outlined-basic" label="Name" variant="outlined" value={leadData.thirdName}  sx={inpStyle} />
-        <TextField id="outlined-basic" label="Email" variant="outlined" value={leadData.thirdEmail} sx={inpStyle}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" 
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,thirdName:e.target.value}
+            })
+        }}
+        value={leadData.thirdName}  sx={inpStyle} />
+        <TextField id="outlined-basic" label="Email" variant="outlined" 
+        onChange={(e)=>{
+            setLeadData((p)=>{
+                return {...p,thirdEmail:e.target.value}
+            })
+        }}
+        value={leadData.thirdEmail} sx={inpStyle}/>
 
 </div>
 <Select sx={inpStyle}
@@ -182,13 +221,15 @@ export default function Form({noOfMembers}) {
 
 
 
-<button onClick={async()=>{
+<button className='p-3 rounded-lg bg-green-700 text-white block m-8 w-350' onClick={async()=>{
 
-    const res = await axios.post("127.0.0.1:3000/api/competitionForm/create-form",{
+console.log(leadData)
+
+    const res = await axios.post("http://localhost:3000/api/competitionForm/create-form",{
         ...leadData
     })
 
-    console.log(res)
+    console.log(res.data)
 }}>Submit</button>
 
 
