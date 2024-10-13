@@ -2,10 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './Pages/Home/Home';
+import Home from './pages/Home/Home';
 import { Outlet } from "react-router-dom";
-import Footer from './Components/Footer';
-import Header from './Components/Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import CompetitionsPage from './pages/CompetitionsPage';
 import CompetitionPage from './pages/CompetitionPage';
 
@@ -34,7 +34,7 @@ const router = createBrowserRouter([{
     element: <CompetitionsPage />
   },
   {
-    path: "/competitions/:name",
+    path: "/competitions/:id",
     element: <CompetitionPage />
   },
 ]}]);
