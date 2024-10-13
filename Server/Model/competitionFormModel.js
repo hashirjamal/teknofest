@@ -1,52 +1,55 @@
 const mongoose = require("mongoose");
 const competitionFormSchema = mongoose.Schema({
   teamName: {
-    type: "string",
+    type: String,
     require: [true, "team name is required"],
   },
   teamLeadName: {
-    type: "string",
+    type: String,
     require: [true, " team lead name is req"],
   },
   teamLeadEmail: {
-    type: "string",
+    type: String,
   },
   teamLeadNumber: {
-    type: "string",
+    type: String,
   },
   teamLeadGender: {
-    type: "string",
+    type: String,
   },
   educationalInstitute: {
     type: "string",
     require: [true, "educational Instutute is req"],
   },
   secondName: {
-    type: "string",
+    type: String,
   },
   secondEmail: {
-    type: "string",
+    type: String,
   },
   secondGender: {
-    type: "string",
+    type: String,
+  },
+  competition: {
+    type: String,
   },
   thirdName: {
-    type: "string",
+    type: String,
   },
   thirdEmail: {
-    type: "string",
+    type: String,
   },
   thirdGender: {
-    type: "string",
+    type: String,
   },
   firstName: {
-    type: "string",
+    type: String,
   },
   firstEmail: {
-    type: "string",
+    type: String,
   },
   firstGender: {
-    type: "string",
+    type: String,
   },
 });
 const competitionFormModel = mongoose.model(
