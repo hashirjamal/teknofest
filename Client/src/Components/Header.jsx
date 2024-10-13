@@ -15,7 +15,7 @@ export default function Header() {
         
         <nav className='hidden  md:flex md:gap-4 text-xl py-6'>
             <a href="">Home</a>
-            <a href="">Competitions</a>
+            <a href="/competitions">Competitions</a>
             <a href="">Contact Us</a>
           
         </nav>
