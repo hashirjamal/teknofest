@@ -5,4 +5,7 @@ competitionFormRouter
   .route("/create-form")
   .post(competitionFormController.competitionForm);
 
+competitionFormRouter
+  .route("/allForms")
+  .get(competitionFormController.getAllForms);
 module.exports = competitionFormRouter;

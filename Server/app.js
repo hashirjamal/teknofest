@@ -3,6 +3,13 @@ const CompetitionRouter = require("./Router/CompetitionsRoute");
 const competitionFormRoute = require("./Router/competitionFormRoute");
 const authRoute = require("./Router/authRoute");
 const app = express();
+const cors = require("cors");
+
+app.use(cors({
+  origin: "*",
+  credentials: true
+}));
+
 
 app.use(express.json());
 app.use("/api/auth", authRoute);

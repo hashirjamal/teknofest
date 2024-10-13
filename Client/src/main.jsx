@@ -6,6 +6,10 @@ import Home from './Pages/Home/Home';
 import { Outlet } from "react-router-dom";
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import CompetitionsPage from './pages/CompetitionsPage';
+import CompetitionPage from './pages/CompetitionPage';
+import AdminPage from './pages/AdminPage';
+
 import Form from './Components/Form';
 
 
@@ -27,6 +31,18 @@ const router = createBrowserRouter([{
   {
     path: "/",
     element: <Home />
+  },
+  {
+    path: "/competitions",
+    element: <CompetitionsPage />
+  },
+  {
+    path: "/competitions/:id",
+    element: <CompetitionPage />
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />
   },
   {
     path: "formChecker",
