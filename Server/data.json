@@ -1,0 +1,74 @@
+[
+  {
+    "title": "CAD craze",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "electronics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "robo war",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "robotics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "robot soccer",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "robotics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "line follow",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "programming",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "robo race",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "robotics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "Circuit design",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "electronics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "pcb mastery",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "electronics",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "vuln hunt",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "cyber",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp",
+    "price": "1000"
+  },
+  {
+    "title": "data warriors",
+    "description": "absd hasg d fgayus gf ashf iuaihuhags tfda b uags uyfaguys hbfd gauy bah gvfauasfvayufagsufyaguysfgausfgausgfuasf",
+    "category": "data science",
+    "timings": "10 am - 2pm",
+    "imageURL": "https://www.teknofestpakistan.com/wp-content/uploads/2024/09/Circuit_design-scaled.jpg.webp-",
+    "price": "1000"
+  }
+]
